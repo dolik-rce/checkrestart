@@ -74,7 +74,7 @@ flush() {
         if [ $VERBOSITY -eq 0 ]; then
             printf "%s\n" "$CMD"
         else
-            printf "%s\n" "$TITLE$CMD$NC"
+            printf "$TITLE%s$NC\n" "$CMD"
             echo "    PID:            $PID"
             echo "    User:           $USR"
             echo "    Running since:  $(ps -p $PID -o lstart=)"
